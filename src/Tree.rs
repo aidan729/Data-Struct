@@ -4,6 +4,18 @@ use std::hash::Hash;
 use std::rc::{Rc, Weak};
 use std::cmp::min;
 
+
+/// TODO:
+/// Error Handling
+/// Edge Weights (just assuming theyre unweghted for now) 
+/// parallelism (this way we can use iterators like rayon for traversal), 
+/// need to add better documentation,
+/// serialization for saving/loading the tree (serde), 
+/// Display trait so that it can visualize the tree struct?? 
+/// 
+/// Optimization: consider if Rc and RefCell for all cases is really neccesary..  
+/// or maybe a combination of mutable refs can optimize certain operations.
+
 // Node structure for the tree
 #[derive(Clone, Debug)]
 pub struct Node<K, T>
